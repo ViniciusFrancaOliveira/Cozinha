@@ -33,15 +33,19 @@ namespace Desafio_AppMax.Entities
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Bem-vindo " + NomeDaCozinha);
-            sb.AppendLine("Abrimos às " + HoraDeAbertura);
-            sb.AppendLine("Fechamos às " + HoraDeFechamento);
+            sb.AppendLine($"\nBem-vindo a {NomeDaCozinha}");
+            sb.AppendLine($"Abrimos às {HoraDeAbertura} horas");
+            sb.AppendLine($"Fechamos às {HoraDeFechamento} horas");
             sb.AppendLine("Temos os seguintes ingredientes: \n");
 
             for (int i = 0; i < ContagemIngredientes(); i++)
             {
-                sb.AppendLine("   * " + Ingrediente[i].Nome);
+                sb.AppendLine($"   * {Ingrediente[i].Nome}");
             }
+
+            sb.AppendLine("\nSomando, ao todo, " +
+                          ContagemIngredientes() +
+                          " ingredientes");
 
             return sb.ToString();
         }
