@@ -17,7 +17,7 @@ namespace Desafio_AppMax
                 new Ingrediente("Linguiça", new DateTime(2022, 2, 5))
             });
 
-            Cozinha cozinhaChinesa = new Cozinha(14, 20, "Cozinha Chinesa", "Yakissoba", new List<IAlimento>()
+            Cozinha cozinhaChinesa = new Cozinha(10, 23, "Cozinha Chinesa", "Yakissoba", new List<IAlimento>()
             {
                 new Ingrediente("Champgion", new DateTime(2022, 2, 5)),
                 new Ingrediente("Brócolis", new DateTime(2022, 2, 3)),
@@ -29,7 +29,8 @@ namespace Desafio_AppMax
             string cozinhaEscolhida = Console.ReadLine().ToLower();
 
             if (cozinhaEscolhida == "mineira") Console.WriteLine(cozinhaMineira);
-            else Console.WriteLine(cozinhaChinesa);
+            else if (cozinhaEscolhida == "chinesa") Console.WriteLine(cozinhaChinesa);
+            else Console.WriteLine("Opção inválida.");
         }
     }
 }
